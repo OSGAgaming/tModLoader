@@ -15,11 +15,9 @@ namespace Terraria.ModLoader.IO
 		//in Terraria.IO.WorldFile.SaveWorldTiles add type check to tile.active() check and wall check
 		internal struct TileTables
 		{
-			internal IDictionary<ushort, ushort> tiles;
+			internal IDictionary<ushort, ushort> tiles,walls;
+   		internal IDictionary<ushort, string> tileModNames,tileNames;
 			internal IDictionary<ushort, bool> frameImportant;
-			internal IDictionary<ushort, ushort> walls;
-			internal IDictionary<ushort, string> tileModNames;
-			internal IDictionary<ushort, string> tileNames;
 
 			internal static TileTables Create() {
 				TileTables tables = new TileTables {
